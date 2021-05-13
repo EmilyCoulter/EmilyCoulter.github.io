@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+<title>The Sound of a Nation</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="../css/bootstrap-4.3.1.css" rel="stylesheet" type="text/css">
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+<script src="../js/jquery-3.3.1.min.js"></script> 
+<script src="../js/popper.min.js"></script> 
+<script src="../js/bootstrap-4.3.1.js"></script> 
+<script src="../js/w3.js"></script>
+</head>
+
+<body>
+<!--todo: link to SM facebook page-->
+<div id="carouselExampleIndicators" class="carousel slide" style="background-color: #7cc792">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+  </ol>
+  <div class="carousel-inner" role="listbox">
+    <div class="carousel-item active"> <img class="d-block mx-auto" src="../1x/alex recital/alex recital.png" alt="Save the date poster" style="border: none;"> </div>
+  </div>
+</div>
+<p class="project-page-nav" id="project-intro">
+  <span class="project-title">The Sound<br>of a Nation<br>
+    &#8212<br>
+  </span>
+  <span class="project-subtitle">Commission</span> </p>
+<div id="project-info" style="display:none;background-color: #7cc792" onclick="fadeinproject()">
+  <p>Poster designed for a senior recital.</p>
+</div>
+<a class="project-page-nav icon project-info-button" onclick="fadeinproject()"></a>
+<a class="project-page-nav icon project-exit-button" onclick="gohome()"></a>
+<div class="project-page-nav project-scroll">
+  <a class="icon" id="last-project"></a>
+  <a class="icon" id="next-project"></a>
+</div>
+
+<script>
+function gohome() {
+  if ( self !== top ) {
+    $("#project-document", window.parent.document).css("top", "100vh");
+	setTimeout(function() {
+      window.location.href = "about:blank";
+	}, 500);
+  } else {
+    window.location.replace("../index.html");	
+  }
+}
+
+function fadeinproject() {
+  if ($("#project-info").css("display")==="none") {
+	$("#project-info").fadeIn();
+  } else {
+	$("#project-info").fadeOut();
+  }
+}
+
+$(document).ready(function(){
+  $(".carousel-item img").click(function(){
+	$('.carousel').carousel('next');
+  });
+  $(document).keydown(function(event){ 
+	if ((event.which)===39) {
+	  $('.carousel').carousel('next');
+	} else if ((event.which)===37) {
+	  $('.carousel').carousel('prev');
+	};
+  });
+});
+</script>
+</body>
+</html>

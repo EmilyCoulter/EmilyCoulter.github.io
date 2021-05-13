@@ -1,0 +1,174 @@
+/*general formatting*/
+body {
+  font-family: "Lexend Peta", sans-serif;
+  padding: 0px;
+  margin: 0;
+}
+a:link {
+  text-decoration: underline;
+  color: inherit;
+}
+a:visited {
+  color: inherit;
+}
+a:hover {
+  color: inherit;
+}
+/*index page*/
+.banner-text {
+  text-align: center;
+  padding: 8vh 16vw;
+}
+.navbar {
+  padding: 1rem 4rem;
+  z-index: 1030;
+}
+.navbar-nav {
+  text-align: right;
+}
+@media (max-width: 992px) {
+  .navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+  }
+}
+
+#project-document {
+  height: 100vh;
+  width: 100%;
+  border: none;
+  position: fixed;
+  top: 100vh;
+  left: 0;
+  transition: top .5s;
+  z-index: 1090;
+}
+.grid-item {
+  width: 25%;
+  padding-bottom: 25%;
+  height: 0;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  float: left;
+}
+.grid-item img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  transition: transform 200ms ease-in-out;
+}
+.grid-item img:hover {
+}
+.wide {
+  width: 50%;
+  padding-bottom: 50%;
+}
+.grid-item img:hover {
+}
+
+
+/* project page styling*/
+/*carousel*/
+.carousel {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  z-index: 10 !important;
+}
+.carousel-indicators li {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+}
+.carousel-inner {
+  height: calc(100vh - 115px);
+  margin-top: 35px;
+  margin-bottom: 80px;
+}
+.carousel-item {
+  height: 100%;
+}
+.carousel-item img {
+  height: 100%;
+  cursor: pointer;
+  border: 15px solid white;
+}
+/*project page navigation icons*/
+svg {
+  fill: white;
+}
+.project-page-nav {
+  z-index: 1040;
+  margin: 25px;
+  color: white;
+  background-size: cover;
+}
+#project-intro {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.project-title {
+  font-size: x-large;
+  letter-spacing: 4px;
+  font-weight: bold;
+}
+.project-subtitle {
+  font-size: large;
+}
+.icon {
+  display: inline-block;
+  background-color: white;
+  height: 25px;
+  width: 25px;
+}
+.project-scroll {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+#last-project {
+  mask: url(https://image.flaticon.com/icons/svg/157/157955.svg);
+}
+#next-project {
+  margin-left: 25px;
+  mask: url(https://image.flaticon.com/icons/svg/157/157956.svg);
+}
+.project-info-button {
+  z-index: 1050;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  mask: url(https://image.flaticon.com/icons/svg/157/157933.svg);
+}
+.project-exit-button {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  right: 0;
+  mask: url(https://image.flaticon.com/icons/svg/157/157915.svg);
+}
+/*project info screen*/
+#project-info {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  z-index: 1045;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  font-size: x-large;
+  font-weight: bold;
+}
+#project-info p {
+  width: 50%;
+  margin: auto;
+}

@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+<title>Statement Making 2019</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="../css/bootstrap-4.3.1.css" rel="stylesheet" type="text/css">
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+<script src="../js/jquery-3.3.1.min.js"></script> 
+<script src="../js/popper.min.js"></script> 
+<script src="../js/bootstrap-4.3.1.js"></script> 
+<script src="../js/w3.js"></script>
+</head>
+
+<body>
+<!--todo: link to SM facebook page-->
+<div id="carouselExampleIndicators" class="carousel slide" style="background-color: #efc42a">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+	<li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+	<li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+	<li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+  </ol>
+  <div class="carousel-inner" role="listbox">
+    <div class="carousel-item active"> <img class="d-block mx-auto" src="../1x/statement making 2019/Save the Date V2-01.png" alt="Save the date poster"> </div>
+	<div class="carousel-item"> <img class="d-block mx-auto" src="../1x/statement making 2019/SM interest meeting.png" alt="Interest Meeting poster"> </div>
+	<div class="carousel-item"> <img class="d-block mx-auto" src="../1x/statement making 2019/Kombucha fabric 16 by 9 Charlotte Green Initiative.png" alt="3D printed textiles poster"> </div>
+	<div class="carousel-item"> <img class="d-block mx-auto" src="../1x/statement making 2019/Event program-01.png" alt="Event program front" style="border-left: none;border-right: none"> </div>
+	<div class="carousel-item"> <img class="d-block mx-auto" src="../1x/statement making 2019/official poster v1-02-01.png" alt="Main show poster with worthy piece"> </div>
+	<div class="carousel-item"> <img class="d-block mx-auto" src="../1x/statement making 2019/official poster v2-01.png" alt="Main show poster with tube piece"> </div>
+	<div class="carousel-item"> <img class="d-block mx-auto" src="../1x/statement making 2019/Save the Date V1-01.png" alt="Save the date card"> </div>
+  </div>
+</div>
+<p class="project-page-nav" id="project-intro">
+  <span class="project-title">Statement Making 2019<br>
+    &#8212<br>
+  </span>
+  <span class="project-subtitle">UNC Charlotte</span> </p>
+<div id="project-info" style="display:none;background-color: #efc42a" onclick="fadeinproject()">
+  <p>Statement Making 2019 was UNCC's third annual digital fabrication fashion show, co-hosted by the CCI and CoAA colleges, featuring student's interpretations of the intersections between fashion, fabrication, and sustainability. UNCC's Makerspaces hosted a variety of workshops in fabrication leading up to the event. The event's program was an origami design inspired by the flyers of UNCC's art department.</p>
+</div>
+<a class="project-page-nav icon project-info-button" onclick="fadeinproject()"></a>
+<a class="project-page-nav icon project-exit-button" onclick="gohome()"></a>
+<div class="project-page-nav project-scroll">
+  <a class="icon" id="last-project"></a>
+  <a class="icon" id="next-project"></a>
+</div>
+
+<script>
+function gohome() {
+  if ( self !== top ) {
+    $("#project-document", window.parent.document).css("top", "100vh");
+	setTimeout(function() {
+      window.location.href = "about:blank";
+	}, 500);
+  } else {
+    window.location.replace("../index.html");	
+  }
+}
+
+function fadeinproject() {
+  if ($("#project-info").css("display")==="none") {
+	$("#project-info").fadeIn();
+  } else {
+	$("#project-info").fadeOut();
+  }
+}
+
+$(document).ready(function(){
+  $(".carousel-item img").click(function(){
+	$('.carousel').carousel('next');
+  });
+  $(document).keydown(function(event){ 
+	if ((event.which)===39) {
+	  $('.carousel').carousel('next');
+	} else if ((event.which)===37) {
+	  $('.carousel').carousel('prev');
+	};
+  });
+});
+</script>
+</body>
+</html>
